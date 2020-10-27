@@ -3,4 +3,6 @@
 .project
 .gradle
 .settings
+.metadata
 bin
+site.retry
