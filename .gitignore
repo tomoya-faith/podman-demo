@@ -1,0 +1,6 @@
+.vagrant
+.classpath
+.project
+.gradle
+.settings
+bin
