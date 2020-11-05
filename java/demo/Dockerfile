@@ -11,7 +11,6 @@ RUN ./gradlew build
 
 FROM adoptopenjdk/openjdk11:alpine-slim	as runner
 EXPOSE 8080
-RUN mkdir /app
-COPY --from=builder /app/build/libs/demo-0.0.1-SNAPSHOT.jar /app/
 WORKDIR /app
+COPY --from=builder /app/build/libs/demo-0.0.1-SNAPSHOT.jar /app/
 CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
